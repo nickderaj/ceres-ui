@@ -162,9 +162,7 @@ export function Chart({ data, caption, height = 350, className }: ChartProps) {
                 dataKey={xDataKey}
                 stroke={subtextColor}
                 tick={{ fill: subtextColor, fontSize: 10 }}
-                tickFormatter={(value) =>
-                  data.bins ? `${data.bins[value]?.toFixed(0)}%` : value
-                }
+                tickFormatter={(value) => (data.bins ? `${data.bins[value]?.toFixed(0)}%` : value)}
                 interval={4}
                 axisLine={{ stroke: borderColor }}
                 tickLine={{ stroke: borderColor }}

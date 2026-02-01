@@ -22,8 +22,8 @@
   ],
   "scripts": {
     "dev": "vite build --watch",
-    "build": "tsc -b && vite build",
-    "typecheck": "tsc -b",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",

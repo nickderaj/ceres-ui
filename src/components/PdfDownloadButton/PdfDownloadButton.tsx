@@ -129,14 +129,7 @@ export function PdfDownloadButton({ contentRef, filename, className }: PdfDownlo
             fill="none"
             viewBox="0 0 24 24"
           >
-            <circle
-              opacity={0.25}
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            />
+            <circle opacity={0.25} cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
             <path
               opacity={0.75}
               fill="currentColor"

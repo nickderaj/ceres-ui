@@ -1,14 +1,7 @@
 import type { ReactNode } from 'react';
 import './Callout.css';
 
-export type CalloutVariant =
-  | 'note'
-  | 'important'
-  | 'critical'
-  | 'tip'
-  | 'warning'
-  | 'info'
-  | 'wip';
+export type CalloutVariant = 'note' | 'important' | 'critical' | 'tip' | 'warning' | 'info' | 'wip';
 
 export interface CalloutProps {
   variant?: CalloutVariant;
@@ -41,11 +34,7 @@ export function Callout({ variant = 'note', title, children, className }: Callou
         ['ul', 'ol', 'p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(child.type),
     );
 
-  const classNames = [
-    'ceres-callout',
-    `ceres-callout--${variant}`,
-    className,
-  ]
+  const classNames = ['ceres-callout', `ceres-callout--${variant}`, className]
     .filter(Boolean)
     .join(' ');
 

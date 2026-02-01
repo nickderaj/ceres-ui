@@ -41,35 +41,19 @@ export function MarkdownRenderer({
     },
     h1({ children }) {
       const id = generateHeadingId(children);
-      return (
-        <h1 id={id}>
-          {children}
-        </h1>
-      );
+      return <h1 id={id}>{children}</h1>;
     },
     h2({ children }) {
       const id = generateHeadingId(children);
-      return (
-        <h2 id={id}>
-          {children}
-        </h2>
-      );
+      return <h2 id={id}>{children}</h2>;
     },
     h3({ children }) {
       const id = generateHeadingId(children);
-      return (
-        <h3 id={id}>
-          {children}
-        </h3>
-      );
+      return <h3 id={id}>{children}</h3>;
     },
     h4({ children }) {
       const id = generateHeadingId(children);
-      return (
-        <h4 id={id}>
-          {children}
-        </h4>
-      );
+      return <h4 id={id}>{children}</h4>;
     },
     p({ children }) {
       return <p>{children}</p>;

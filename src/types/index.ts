@@ -59,14 +59,7 @@ export interface ChartData {
 
 /* ── Callout types ───────────────────────────────────────────── */
 
-export type CalloutVariant =
-  | 'note'
-  | 'important'
-  | 'critical'
-  | 'tip'
-  | 'warning'
-  | 'info'
-  | 'wip';
+export type CalloutVariant = 'note' | 'important' | 'critical' | 'tip' | 'warning' | 'info' | 'wip';
 
 /* ── Table of Contents types ─────────────────────────────────── */
 
