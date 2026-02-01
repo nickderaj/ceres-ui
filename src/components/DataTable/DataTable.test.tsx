@@ -34,4 +34,18 @@ describe('DataTable', () => {
     expect(wrapper).toHaveClass('ceres-data-table-wrapper');
     expect(wrapper).toHaveClass('my-table');
   });
+
+  it('renders empty table when data has no rows', () => {
+    const emptyData = { columns: ['A', 'B'], data: [] };
+    const { container } = render(<DataTable data={emptyData} />);
+    expect(container.querySelector('thead')).toBeInTheDocument();
+    expect(container.querySelector('tbody')?.querySelectorAll('tr')).toHaveLength(0);
+  });
+
+  it('renders table with empty columns when columns array is empty', () => {
+    const noColumns = { columns: [], data: [['x', 'y']] };
+    const { container } = render(<DataTable data={noColumns} />);
+    const headerCells = container.querySelectorAll('thead th');
+    expect(headerCells).toHaveLength(0);
+  });
 });

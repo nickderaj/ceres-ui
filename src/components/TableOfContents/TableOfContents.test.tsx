@@ -38,4 +38,16 @@ describe('TableOfContents', () => {
     expect(nav).toHaveClass('ceres-toc');
     expect(nav).toHaveClass('my-toc');
   });
+
+  it('renders empty list when items is empty array', () => {
+    const { container } = render(<TableOfContents items={[]} />);
+    const listItems = container.querySelectorAll('.ceres-toc__list li');
+    expect(listItems).toHaveLength(0);
+  });
+
+  it('renders empty list when items is undefined', () => {
+    const { container } = render(<TableOfContents />);
+    const listItems = container.querySelectorAll('.ceres-toc__list li');
+    expect(listItems).toHaveLength(0);
+  });
 });

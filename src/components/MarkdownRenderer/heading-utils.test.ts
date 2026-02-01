@@ -40,4 +40,14 @@ describe('getTextFromChildren', () => {
     expect(getTextFromChildren(null)).toBe('');
     expect(getTextFromChildren(undefined)).toBe('');
   });
+
+  it('extracts text from React-like element (object with props.children)', () => {
+    const element = { props: { children: 'nested text' } };
+    expect(getTextFromChildren(element)).toBe('nested text');
+  });
+
+  it('extracts text from nested React-like elements', () => {
+    const element = { props: { children: { props: { children: 'deep' } } } };
+    expect(getTextFromChildren(element)).toBe('deep');
+  });
 });

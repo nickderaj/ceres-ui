@@ -11,7 +11,7 @@ describe('BackToTopButton', () => {
 
   it('does not render when visible=false', () => {
     render(<BackToTopButton visible={false} />);
-    expect(screen.queryByRole('button', { hidden: true })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button')).toBeNull();
   });
 
   it('has an aria-label for accessibility', () => {

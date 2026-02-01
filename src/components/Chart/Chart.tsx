@@ -60,7 +60,10 @@ function ChartTooltip({
 
   let xLabel: string;
   if (chartType === 'histogram' && bins) {
-    xLabel = `${bins[Number(label)].toFixed(1)}% to ${bins[Number(label) + 1].toFixed(1)}%`;
+    const idx = Number(label);
+    const lower = bins[idx]?.toFixed(1) ?? '';
+    const upper = bins[idx + 1]?.toFixed(1) ?? '';
+    xLabel = upper ? `${lower}% to ${upper}%` : `${lower}%`;
   } else if (xAxisData && typeof xAxisData[0] === 'string') {
     xLabel = String(label);
   } else {
