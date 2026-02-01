@@ -41,6 +41,9 @@ pnpm add ceres-ui react-markdown react-syntax-highlighter remark-gfm remark-math
 
 # Using Chart
 pnpm add ceres-ui recharts
+
+# Full installation (all components)
+pnpm add ceres-ui react-markdown react-syntax-highlighter remark-gfm remark-math rehype-raw rehype-katex katex recharts
 ```
 
 ---
