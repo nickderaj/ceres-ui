@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { describe, it, expect } from 'vitest';
 import { generateHeadingId, getTextFromChildren } from './heading-utils';
 
@@ -42,12 +43,14 @@ describe('getTextFromChildren', () => {
   });
 
   it('extracts text from React-like element (object with props.children)', () => {
-    const element = { props: { children: 'nested text' } };
+    const element = { props: { children: 'nested text' } } as unknown as ReactNode;
     expect(getTextFromChildren(element)).toBe('nested text');
   });
 
   it('extracts text from nested React-like elements', () => {
-    const element = { props: { children: { props: { children: 'deep' } } } };
+    const element = {
+      props: { children: { props: { children: 'deep' } } },
+    } as unknown as ReactNode;
     expect(getTextFromChildren(element)).toBe('deep');
   });
 });
