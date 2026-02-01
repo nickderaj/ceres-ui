@@ -1,0 +1,25 @@
+# Dependencies and build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Python
+**/__pycache__
+**/.venv
+**/.cache
+
+# Generated / large data
+*.min.js
+coverage
+
+# Font binaries
+*.otf
+*.ttf
+*.woff
+*.woff2

@@ -30,6 +30,9 @@
     "format": "prettier --write .",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx,css,md,json}": "prettier --write"
+  },
   "peerDependencies": {
     "katex": ">=0.16.0",
     "react": ">=18.0.0",
@@ -96,7 +99,8 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "lint-staged": "^15.4.3"
   },
   "license": "MIT",
   "repository": {
