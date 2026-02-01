@@ -1,0 +1,77 @@
+.ceres-callout {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: var(--ceres-radius-sm);
+  border-left: 4px solid var(--ceres-border);
+  color: var(--ceres-text-body);
+}
+
+.ceres-callout--critical {
+  border-left: none;
+  border: 2px solid var(--ceres-callout-critical-border);
+}
+
+/* Variant backgrounds */
+.ceres-callout--note {
+  background-color: var(--ceres-callout-note-bg);
+  border-left-color: var(--ceres-callout-note-border);
+}
+.ceres-callout--important {
+  background-color: var(--ceres-callout-important-bg);
+  border-left-color: var(--ceres-callout-important-border);
+}
+.ceres-callout--critical {
+  background-color: var(--ceres-callout-critical-bg);
+}
+.ceres-callout--tip {
+  background-color: var(--ceres-callout-tip-bg);
+  border-left-color: var(--ceres-callout-tip-border);
+}
+.ceres-callout--warning {
+  background-color: var(--ceres-callout-warning-bg);
+  border-left-color: var(--ceres-callout-warning-border);
+}
+.ceres-callout--info {
+  background-color: var(--ceres-callout-info-bg);
+  border-left-color: var(--ceres-callout-info-border);
+}
+.ceres-callout--wip {
+  background-color: var(--ceres-callout-wip-bg);
+  border-left-color: var(--ceres-callout-wip-border);
+}
+
+/* Titles */
+.ceres-callout__title {
+  font-weight: 700;
+}
+.ceres-callout--note .ceres-callout__title {
+  color: var(--ceres-callout-note-title);
+}
+.ceres-callout--important .ceres-callout__title {
+  color: var(--ceres-callout-important-title);
+}
+.ceres-callout--critical .ceres-callout__title {
+  color: var(--ceres-callout-critical-title);
+}
+.ceres-callout--tip .ceres-callout__title {
+  color: var(--ceres-callout-tip-title);
+}
+.ceres-callout--warning .ceres-callout__title {
+  color: var(--ceres-callout-warning-title);
+}
+.ceres-callout--info .ceres-callout__title {
+  color: var(--ceres-callout-info-title);
+}
+.ceres-callout--wip .ceres-callout__title {
+  color: var(--ceres-callout-wip-title);
+}
+
+/* Block title (when children contain block elements) */
+.ceres-callout__title--block {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ceres-callout__content {
+  color: var(--ceres-text-body);
+}

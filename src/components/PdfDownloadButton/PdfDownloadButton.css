@@ -1,0 +1,49 @@
+.ceres-pdf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  color: var(--ceres-text-faint);
+  border: 1px solid var(--ceres-border-hover);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .ceres-pdf-button {
+    font-size: 0.875rem;
+  }
+}
+
+.ceres-pdf-button:hover {
+  color: var(--ceres-text-description);
+  border-color: var(--ceres-border-strong);
+}
+
+.ceres-pdf-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ceres-pdf-button__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.ceres-pdf-button__spinner {
+  width: 16px;
+  height: 16px;
+  animation: ceres-spin 1s linear infinite;
+}
+
+/* Hide in print */
+@media print {
+  .ceres-pdf-button {
+    display: none !important;
+  }
+}

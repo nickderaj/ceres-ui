@@ -1,0 +1,41 @@
+.ceres-badge {
+  display: inline-block;
+  border-radius: var(--ceres-radius-sm);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Sizes */
+.ceres-badge--sm {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+}
+
+.ceres-badge--md {
+  padding: 4px 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+/* Variants */
+.ceres-badge--success {
+  background-color: var(--ceres-success-bg);
+  color: var(--ceres-green);
+}
+
+.ceres-badge--danger {
+  background-color: var(--ceres-danger-bg);
+  color: var(--ceres-red);
+}
+
+.ceres-badge--neutral {
+  background-color: var(--ceres-neutral-bg);
+  color: var(--ceres-text-muted);
+}
+
+/* Bordered variant */
+.ceres-badge--bordered {
+  border: 1px solid currentColor;
+}

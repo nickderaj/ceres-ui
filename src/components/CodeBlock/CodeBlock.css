@@ -1,0 +1,30 @@
+.ceres-code-block {
+  border-radius: var(--ceres-radius-md);
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+  margin: 0;
+  overflow: visible;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.ceres-code-block code {
+  font-family: var(--ceres-font-mono);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.ceres-code-inline {
+  background-color: var(--ceres-surface);
+  color: var(--ceres-purple);
+  padding: 2px 6px;
+  border-radius: var(--ceres-radius-sm);
+  font-size: 0.85em;
+  font-family: var(--ceres-font-mono);
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .ceres-code-inline {
+    padding: 2px 8px;
+  }
+}

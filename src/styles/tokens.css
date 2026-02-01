@@ -1,0 +1,176 @@
+/*
+ * ceres-ui design tokens
+ *
+ * All colors and spacing are defined as CSS custom properties.
+ * Override --ceres-font-heading on :root to change the heading font globally.
+ *
+ * Theme activation:
+ *   Dark (default): <html data-theme="dark"> or no attribute
+ *   Light:          <html data-theme="light">
+ */
+
+:root,
+[data-theme='dark'] {
+  /* ── Backgrounds ─────────────────────────────────────────────── */
+  --ceres-bg-main: #0a0a0a;
+  --ceres-bg-post: #1a1a1a;
+  --ceres-surface: #1e1e2e;
+
+  /* ── Borders ─────────────────────────────────────────────────── */
+  --ceres-border: #313244;
+  --ceres-border-subtle: #2a2a2a;
+  --ceres-border-hover: #3a3a3a;
+  --ceres-border-strong: #4a4a4a;
+
+  /* ── Text ────────────────────────────────────────────────────── */
+  --ceres-text-primary: #f5f5f0;
+  --ceres-text-body: #cdd6f4;
+  --ceres-text-muted: #a6adc8;
+  --ceres-text-faint: #6c7086;
+  --ceres-text-dim: #585b70;
+  --ceres-text-description: #a0a0a0;
+
+  /* ── Accent colors ───────────────────────────────────────────── */
+  --ceres-blue: #89b4fa;
+  --ceres-blue-hover: #b4befe;
+  --ceres-green: #a6e3a1;
+  --ceres-red: #f38ba8;
+  --ceres-yellow: #f9e2af;
+  --ceres-peach: #fab387;
+  --ceres-purple: #cba6f7;
+  --ceres-teal: #94e2d5;
+  --ceres-cyan: #89dceb;
+  --ceres-pink: #f5c2e7;
+
+  /* ── Semantic ────────────────────────────────────────────────── */
+  --ceres-success-bg: rgba(166, 227, 161, 0.2);
+  --ceres-success-bg-subtle: rgba(166, 227, 161, 0.06);
+  --ceres-danger-bg: rgba(243, 139, 168, 0.2);
+  --ceres-danger-bg-subtle: rgba(243, 139, 168, 0.06);
+  --ceres-neutral-bg: rgba(88, 91, 112, 0.2);
+  --ceres-neutral-bg-subtle: rgba(88, 91, 112, 0.06);
+
+  /* ── Callout variant backgrounds ─────────────────────────────── */
+  --ceres-callout-note-bg: rgba(203, 166, 247, 0.15);
+  --ceres-callout-note-border: #cba6f7;
+  --ceres-callout-note-title: #cba6f7;
+  --ceres-callout-important-bg: rgba(243, 139, 168, 0.15);
+  --ceres-callout-important-border: #f38ba8;
+  --ceres-callout-important-title: #f38ba8;
+  --ceres-callout-critical-bg: rgba(243, 139, 168, 0.25);
+  --ceres-callout-critical-border: #f38ba8;
+  --ceres-callout-critical-title: #f38ba8;
+  --ceres-callout-tip-bg: rgba(243, 139, 168, 0.15);
+  --ceres-callout-tip-border: #f38ba8;
+  --ceres-callout-tip-title: #f38ba8;
+  --ceres-callout-warning-bg: rgba(250, 179, 135, 0.15);
+  --ceres-callout-warning-border: #fab387;
+  --ceres-callout-warning-title: #fab387;
+  --ceres-callout-info-bg: rgba(137, 180, 250, 0.15);
+  --ceres-callout-info-border: #89b4fa;
+  --ceres-callout-info-title: #89b4fa;
+  --ceres-callout-wip-bg: rgba(203, 166, 247, 0.15);
+  --ceres-callout-wip-border: #cba6f7;
+  --ceres-callout-wip-title: #cba6f7;
+
+  /* ── Scrollbar ───────────────────────────────────────────────── */
+  --ceres-scrollbar-track: #1e1e2e;
+  --ceres-scrollbar-thumb: #45475a;
+  --ceres-scrollbar-thumb-hover: #585b70;
+
+  /* ── Star field ──────────────────────────────────────────────── */
+  --ceres-star-color: #f5f5f0;
+
+  /* ── Typography ──────────────────────────────────────────────── */
+  --ceres-font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ceres-font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ceres-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* ── Spacing ─────────────────────────────────────────────────── */
+  --ceres-radius-sm: 4px;
+  --ceres-radius-md: 8px;
+  --ceres-radius-lg: 12px;
+  --ceres-radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────────────────── */
+  --ceres-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --ceres-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --ceres-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='light'] {
+  /* ── Backgrounds ─────────────────────────────────────────────── */
+  --ceres-bg-main: #eff1f5;
+  --ceres-bg-post: #e6e9ef;
+  --ceres-surface: #ccd0da;
+
+  /* ── Borders ─────────────────────────────────────────────────── */
+  --ceres-border: #bcc0cc;
+  --ceres-border-subtle: #ccd0da;
+  --ceres-border-hover: #acb0be;
+  --ceres-border-strong: #9ca0b0;
+
+  /* ── Text ────────────────────────────────────────────────────── */
+  --ceres-text-primary: #4c4f69;
+  --ceres-text-body: #5c5f77;
+  --ceres-text-muted: #6c6f85;
+  --ceres-text-faint: #8c8fa1;
+  --ceres-text-dim: #9ca0b0;
+  --ceres-text-description: #6c6f85;
+
+  /* ── Accent colors ───────────────────────────────────────────── */
+  --ceres-blue: #1e66f5;
+  --ceres-blue-hover: #7287fd;
+  --ceres-green: #40a02b;
+  --ceres-red: #d20f39;
+  --ceres-yellow: #df8e1d;
+  --ceres-peach: #fe640b;
+  --ceres-purple: #8839ef;
+  --ceres-teal: #179299;
+  --ceres-cyan: #04a5e5;
+  --ceres-pink: #ea76cb;
+
+  /* ── Semantic ────────────────────────────────────────────────── */
+  --ceres-success-bg: rgba(64, 160, 43, 0.15);
+  --ceres-success-bg-subtle: rgba(64, 160, 43, 0.06);
+  --ceres-danger-bg: rgba(210, 15, 57, 0.15);
+  --ceres-danger-bg-subtle: rgba(210, 15, 57, 0.06);
+  --ceres-neutral-bg: rgba(108, 111, 133, 0.15);
+  --ceres-neutral-bg-subtle: rgba(108, 111, 133, 0.06);
+
+  /* ── Callout variant backgrounds ─────────────────────────────── */
+  --ceres-callout-note-bg: rgba(136, 57, 239, 0.1);
+  --ceres-callout-note-border: #8839ef;
+  --ceres-callout-note-title: #8839ef;
+  --ceres-callout-important-bg: rgba(210, 15, 57, 0.1);
+  --ceres-callout-important-border: #d20f39;
+  --ceres-callout-important-title: #d20f39;
+  --ceres-callout-critical-bg: rgba(210, 15, 57, 0.18);
+  --ceres-callout-critical-border: #d20f39;
+  --ceres-callout-critical-title: #d20f39;
+  --ceres-callout-tip-bg: rgba(210, 15, 57, 0.1);
+  --ceres-callout-tip-border: #d20f39;
+  --ceres-callout-tip-title: #d20f39;
+  --ceres-callout-warning-bg: rgba(254, 100, 11, 0.1);
+  --ceres-callout-warning-border: #fe640b;
+  --ceres-callout-warning-title: #fe640b;
+  --ceres-callout-info-bg: rgba(30, 102, 245, 0.1);
+  --ceres-callout-info-border: #1e66f5;
+  --ceres-callout-info-title: #1e66f5;
+  --ceres-callout-wip-bg: rgba(136, 57, 239, 0.1);
+  --ceres-callout-wip-border: #8839ef;
+  --ceres-callout-wip-title: #8839ef;
+
+  /* ── Scrollbar ───────────────────────────────────────────────── */
+  --ceres-scrollbar-track: #e6e9ef;
+  --ceres-scrollbar-thumb: #acb0be;
+  --ceres-scrollbar-thumb-hover: #9ca0b0;
+
+  /* ── Star field ──────────────────────────────────────────────── */
+  --ceres-star-color: #4c4f69;
+
+  /* ── Shadows ─────────────────────────────────────────────────── */
+  --ceres-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --ceres-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --ceres-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}

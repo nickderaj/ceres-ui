@@ -1,0 +1,94 @@
+/*
+ * ceres-ui base styles
+ *
+ * Applies global resets when imported by the consumer.
+ * All rules are scoped to the .ceres-root wrapper or use low-specificity selectors.
+ */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling (scoped to ceres-root) */
+.ceres-root {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ceres-scrollbar-thumb) var(--ceres-scrollbar-track);
+}
+
+.ceres-root *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ceres-root *::-webkit-scrollbar-track {
+  background: var(--ceres-scrollbar-track);
+  border-radius: var(--ceres-radius-sm);
+}
+
+.ceres-root *::-webkit-scrollbar-thumb {
+  background: var(--ceres-scrollbar-thumb);
+  border-radius: var(--ceres-radius-sm);
+}
+
+.ceres-root *::-webkit-scrollbar-thumb:hover {
+  background: var(--ceres-scrollbar-thumb-hover);
+}
+
+.ceres-root *::-webkit-scrollbar-corner {
+  background: var(--ceres-scrollbar-track);
+}
+
+/* Code block scrollbar */
+.ceres-root pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.ceres-root pre::-webkit-scrollbar-track {
+  background: var(--ceres-surface);
+  border-radius: 3px;
+}
+
+.ceres-root pre::-webkit-scrollbar-thumb {
+  background: var(--ceres-border);
+  border-radius: 3px;
+}
+
+.ceres-root pre::-webkit-scrollbar-thumb:hover {
+  background: var(--ceres-scrollbar-thumb);
+}
+
+/* KaTeX formula color */
+.ceres-root .katex {
+  color: var(--ceres-text-body);
+}
+
+/* Animation keyframes */
+@keyframes ceres-star-flicker {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes ceres-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ceres-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

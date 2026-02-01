@@ -1,0 +1,100 @@
+.ceres-post-card {
+  display: block;
+  padding: 16px;
+  border-radius: var(--ceres-radius-md);
+  background-color: var(--ceres-bg-post);
+  border: 1px solid var(--ceres-border-subtle);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+@media (min-width: 640px) {
+  .ceres-post-card {
+    padding: 24px;
+  }
+}
+
+.ceres-post-card:hover {
+  border-color: var(--ceres-border-hover);
+  background-color: var(--ceres-surface);
+}
+
+.ceres-post-card__date {
+  font-size: 0.75rem;
+  color: var(--ceres-text-faint);
+}
+
+@media (min-width: 640px) {
+  .ceres-post-card__date {
+    font-size: 0.875rem;
+  }
+}
+
+.ceres-post-card__title {
+  font-family: var(--ceres-font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ceres-text-primary);
+  margin-top: 6px;
+  line-height: 1.375;
+  transition: color 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .ceres-post-card__title {
+    font-size: 1.25rem;
+    margin-top: 8px;
+  }
+}
+
+.ceres-post-card:hover .ceres-post-card__title {
+  color: var(--ceres-blue);
+}
+
+.ceres-post-card__description {
+  color: var(--ceres-text-description);
+  margin-top: 6px;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .ceres-post-card__description {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+}
+
+.ceres-post-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+@media (min-width: 640px) {
+  .ceres-post-card__tags {
+    gap: 8px;
+    margin-top: 16px;
+  }
+}
+
+.ceres-post-card__tag {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  border-radius: var(--ceres-radius-full);
+  background-color: var(--ceres-border-subtle);
+  color: var(--ceres-purple);
+}
+
+@media (min-width: 640px) {
+  .ceres-post-card__tag {
+    padding: 4px 8px;
+  }
+}

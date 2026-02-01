@@ -1,0 +1,37 @@
+.ceres-back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--ceres-radius-full);
+  background-color: var(--ceres-border-subtle);
+  border: 1px solid var(--ceres-border-hover);
+  color: var(--ceres-purple);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--ceres-shadow-lg);
+  padding: 0;
+}
+
+/* Show on larger screens */
+@media (min-width: 1024px) {
+  .ceres-back-to-top {
+    display: flex;
+  }
+}
+
+.ceres-back-to-top:hover {
+  background-color: var(--ceres-border-hover);
+  border-color: var(--ceres-purple);
+  box-shadow: var(--ceres-shadow-lg);
+}
+
+.ceres-back-to-top__icon {
+  width: 20px;
+  height: 20px;
+}

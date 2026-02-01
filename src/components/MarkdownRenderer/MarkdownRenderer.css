@@ -1,0 +1,241 @@
+/* ── Markdown article wrapper ─────────────────────────────────── */
+.ceres-markdown {
+  max-width: none;
+  color: var(--ceres-text-body);
+}
+
+/* ── Headings ────────────────────────────────────────────────── */
+.ceres-markdown h1,
+.ceres-markdown h2,
+.ceres-markdown h3,
+.ceres-markdown h4 {
+  font-family: var(--ceres-font-heading);
+  color: var(--ceres-text-primary);
+  scroll-margin-top: 96px;
+}
+
+.ceres-markdown h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.ceres-markdown h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.ceres-markdown h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.ceres-markdown h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown h1 {
+    font-size: 1.875rem;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  .ceres-markdown h2 {
+    font-size: 1.5rem;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  .ceres-markdown h3 {
+    font-size: 1.25rem;
+    margin-top: 24px;
+  }
+
+  .ceres-markdown h4 {
+    font-size: 1.125rem;
+    margin-top: 20px;
+  }
+}
+
+/* ── Paragraphs ──────────────────────────────────────────────── */
+.ceres-markdown p {
+  color: var(--ceres-text-body);
+  font-size: 0.875rem;
+  line-height: 1.625;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* ── Links ───────────────────────────────────────────────────── */
+.ceres-markdown a {
+  color: var(--ceres-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.ceres-markdown a:hover {
+  color: var(--ceres-blue-hover);
+}
+
+/* ── Lists ───────────────────────────────────────────────────── */
+.ceres-markdown ul {
+  list-style-type: disc;
+  padding-left: 16px;
+  margin-bottom: 12px;
+  color: var(--ceres-text-body);
+  font-size: 0.875rem;
+}
+
+.ceres-markdown ol {
+  list-style-type: decimal;
+  padding-left: 16px;
+  margin-bottom: 12px;
+  color: var(--ceres-text-body);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown ul,
+  .ceres-markdown ol {
+    padding-left: 24px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+  }
+}
+
+.ceres-markdown li {
+  line-height: 1.625;
+}
+
+.ceres-markdown li + li {
+  margin-top: 4px;
+}
+
+/* ── Blockquote ──────────────────────────────────────────────── */
+.ceres-markdown blockquote {
+  border-left: 2px solid var(--ceres-purple);
+  padding-left: 12px;
+  margin: 16px 0;
+  color: var(--ceres-text-description);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown blockquote {
+    border-left-width: 4px;
+    padding-left: 16px;
+    margin: 24px 0;
+    font-size: 1rem;
+  }
+}
+
+/* ── Horizontal rule ─────────────────────────────────────────── */
+.ceres-markdown hr {
+  border: none;
+  border-top: 1px solid var(--ceres-border-hover);
+  margin: 24px 0;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown hr {
+    margin: 32px 0;
+  }
+}
+
+/* ── Tables ──────────────────────────────────────────────────── */
+.ceres-markdown__table-wrapper {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown__table-wrapper {
+    margin: 24px 0;
+  }
+}
+
+.ceres-markdown table {
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.ceres-markdown thead {
+  border-bottom: 1px solid var(--ceres-border-hover);
+}
+
+.ceres-markdown th {
+  font-family: var(--ceres-font-heading);
+  padding: 8px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ceres-text-primary);
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown th {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+.ceres-markdown td {
+  padding: 8px;
+  font-size: 0.75rem;
+  color: var(--ceres-text-body);
+  border-bottom: 1px solid var(--ceres-border-subtle);
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown td {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+/* ── Pre (code block wrapper) ────────────────────────────────── */
+.ceres-markdown__pre {
+  margin: 16px 0;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown__pre {
+    margin: 24px 0;
+  }
+}
+
+/* ── Inline code ─────────────────────────────────────────────── */
+.ceres-markdown code:not(pre code) {
+  background-color: var(--ceres-surface);
+  color: var(--ceres-purple);
+  padding: 2px 6px;
+  border-radius: var(--ceres-radius-sm);
+  font-size: 0.85em;
+  font-family: var(--ceres-font-mono);
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .ceres-markdown code:not(pre code) {
+    padding: 2px 8px;
+  }
+}

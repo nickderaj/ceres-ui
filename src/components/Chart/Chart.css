@@ -1,0 +1,68 @@
+.ceres-chart {
+  margin: 24px 0;
+}
+
+@media (min-width: 640px) {
+  .ceres-chart {
+    margin: 32px 0;
+  }
+}
+
+.ceres-chart__container {
+  border-radius: var(--ceres-radius-md);
+  padding: 16px;
+  border: 1px solid var(--ceres-border);
+  background-color: var(--ceres-surface);
+}
+
+@media (min-width: 640px) {
+  .ceres-chart__container {
+    padding: 24px;
+  }
+}
+
+.ceres-chart__title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--ceres-text-body);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .ceres-chart__title {
+    font-size: 1rem;
+  }
+}
+
+.ceres-chart__caption {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--ceres-text-faint);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+@media (min-width: 640px) {
+  .ceres-chart__caption {
+    font-size: 0.875rem;
+    margin-top: 12px;
+  }
+}
+
+.ceres-chart__error {
+  color: var(--ceres-red);
+  background-color: var(--ceres-danger-bg-subtle);
+  padding: 12px;
+  border-radius: var(--ceres-radius-md);
+  font-size: 0.75rem;
+  margin: 16px 0;
+}
+
+@media (min-width: 640px) {
+  .ceres-chart__error {
+    padding: 16px;
+    font-size: 0.875rem;
+    margin: 24px 0;
+  }
+}
