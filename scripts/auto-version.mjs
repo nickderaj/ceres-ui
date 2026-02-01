@@ -1,7 +1,7 @@
 /**
  * auto-version.mjs
  *
- * Pre-commit hook script that bumps the minor version of package.json
+ * Pre-commit hook script that bumps the patch version of package.json
  * if and only if the version was not manually changed since the last commit.
  *
  * Usage: node scripts/auto-version.mjs
@@ -32,15 +32,15 @@ try {
     process.exit(0);
   }
 
-  // Parse semver and bump minor, reset patch
+  // Parse semver and bump patch
   const parts = currentVersion.split('.').map(Number);
   if (parts.length !== 3 || parts.some(isNaN)) {
     console.error(`auto-version: could not parse version "${currentVersion}"`);
     process.exit(0);
   }
 
-  const [major, minor] = parts;
-  const newVersion = `${major}.${minor + 1}.0`;
+  const [major, minor, patch] = parts;
+  const newVersion = `${major}.${minor}.${patch + 1}`;
 
   pkg.version = newVersion;
   writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
