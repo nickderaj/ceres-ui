@@ -78,7 +78,7 @@ function App() {
 1. **Import CSS** &mdash; add `import 'ceres-ui/css'` once in your entry point.
 2. **Set theme** &mdash; add `data-theme="dark"` or `data-theme="light"` to your `<html>` element. Dark is the default.
 3. **Wrap in `.ceres-root`** &mdash; the root class enables themed scrollbars. Apply it to your outermost container.
-4. **(Optional) Override fonts** &mdash; set `--ceres-font-heading` on `:root` to use a custom heading font across all components.
+4. **(Optional) Override fonts** &mdash; set `--ceres-font-heading` on `:root` to use a custom heading font across all components. This applies in both light and dark theme.
 
 ```css
 /* In your app's global CSS */

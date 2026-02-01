@@ -2,12 +2,21 @@
  * ceres-ui design tokens
  *
  * All colors and spacing are defined as CSS custom properties.
- * Override --ceres-font-heading on :root to change the heading font globally.
+ * Override --ceres-font-heading (and other typography vars) on :root to change
+ * fonts globally; they are defined only on :root so your override applies in
+ * both light and dark theme.
  *
  * Theme activation:
  *   Dark (default): <html data-theme="dark"> or no attribute
  *   Light:          <html data-theme="light">
  */
+
+/* Typography: only on :root so app overrides on :root apply in all themes */
+:root {
+  --ceres-font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ceres-font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ceres-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
 
 :root,
 [data-theme='dark'] {
@@ -80,11 +89,6 @@
 
   /* ── Star field ──────────────────────────────────────────────── */
   --ceres-star-color: #f5f5f0;
-
-  /* ── Typography ──────────────────────────────────────────────── */
-  --ceres-font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --ceres-font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --ceres-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* ── Spacing ─────────────────────────────────────────────────── */
   --ceres-radius-sm: 4px;
