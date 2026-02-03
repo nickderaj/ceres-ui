@@ -9,6 +9,7 @@ export { TableOfContents } from './components/TableOfContents';
 export { PostCard } from './components/PostCard';
 export { DataTable } from './components/DataTable';
 export { Chart } from './components/Chart';
+export { MultiPanelChart } from './components/MultiPanelChart';
 export { BackToTopButton } from './components/BackToTopButton';
 export { StarField } from './components/StarField';
 export { Badge } from './components/Badge';
@@ -31,6 +32,11 @@ export type {
   ChartSeriesData,
   ChartReferenceLineData,
 } from './components/Chart';
+export type {
+  MultiPanelChartProps,
+  MultiPanelChartData,
+  IndicatorPanelData,
+} from './components/MultiPanelChart';
 export type { BackToTopButtonProps } from './components/BackToTopButton';
 export type { StarFieldProps } from './components/StarField';
 export type { BadgeProps } from './components/Badge';

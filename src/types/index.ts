@@ -57,6 +57,41 @@ export interface ChartData {
   };
 }
 
+/* ── Multi-panel chart types ─────────────────────────────────── */
+
+export interface IndicatorPanelData {
+  title: string;
+  series: ChartSeriesData[];
+  referenceLines?: ChartReferenceLineData[];
+  yAxis?: {
+    label?: string;
+    format?: 'currency' | 'number' | 'percent';
+  };
+  /** Panel height in pixels. Default 120. */
+  height?: number;
+  /** Chart type for this indicator. Default 'line'. */
+  type?: 'line' | 'bar';
+}
+
+export interface MultiPanelChartData {
+  title: string;
+  xAxis: {
+    label: string;
+    data: (number | string)[];
+  };
+  main: {
+    series: ChartSeriesData[];
+    referenceLines?: ChartReferenceLineData[];
+    yAxis: {
+      label?: string;
+      format?: 'currency' | 'number' | 'percent';
+    };
+    /** Main chart height in pixels. Default 300. */
+    height?: number;
+  };
+  indicators: IndicatorPanelData[];
+}
+
 /* ── Callout types ───────────────────────────────────────────── */
 
 export type CalloutVariant = 'note' | 'important' | 'critical' | 'tip' | 'warning' | 'info' | 'wip';

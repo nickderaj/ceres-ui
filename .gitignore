@@ -3,3 +3,6 @@ dist
 *.tsbuildinfo
 .DS_Store
 .pnpm-store
+e2e/test-results/
+playwright-report/
+blob-report/

@@ -18,6 +18,11 @@ yarn.lock
 *.min.js
 coverage
 
+# Playwright
+e2e/test-results
+e2e/snapshots
+playwright-report
+
 # Font binaries
 *.otf
 *.ttf
