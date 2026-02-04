@@ -11,6 +11,7 @@ import {
   TableOfContentsPage,
   PdfDownloadButtonPage,
   MarkdownRendererPage,
+  MultiPanelChartPage,
   ShowcasePage,
 } from './pages';
 
@@ -26,6 +27,7 @@ const routes: Record<string, () => JSX.Element> = {
   '#toc': TableOfContentsPage,
   '#pdfdownload': PdfDownloadButtonPage,
   '#markdown': MarkdownRendererPage,
+  '#multipanelchart': MultiPanelChartPage,
   '#showcase': ShowcasePage,
 };
 

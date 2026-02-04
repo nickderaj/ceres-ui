@@ -1,6 +1,6 @@
 {
   "name": "ceres-ui",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "type": "module",
   "description": "A dark-themed UI component library for blog and content sites, built with React and CSS custom properties.",
   "main": "dist/ceres-ui.cjs.js",
@@ -35,7 +35,9 @@
     "e2e:ui": "playwright test --ui",
     "e2e:headed": "playwright test --headed",
     "e2e:update-snapshots": "playwright test --update-snapshots",
-    "e2e:preview": "vite --config e2e/vite.config.ts"
+    "e2e:preview": "vite --config e2e/vite.config.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o storybook-static"
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx,css,md,json}": "prettier --write"
@@ -81,6 +83,9 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@playwright/test": "^1.58.1",
+    "@storybook/addon-themes": "^10.2.5",
+    "@storybook/react": "^10.2.5",
+    "@storybook/react-vite": "^10.2.5",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.5",
@@ -104,6 +109,7 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
+    "storybook": "^10.2.5",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",

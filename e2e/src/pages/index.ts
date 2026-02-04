@@ -9,4 +9,5 @@ export { StarFieldPage } from './StarFieldPage';
 export { TableOfContentsPage } from './TableOfContentsPage';
 export { PdfDownloadButtonPage } from './PdfDownloadButtonPage';
 export { MarkdownRendererPage } from './MarkdownRendererPage';
+export { MultiPanelChartPage } from './MultiPanelChartPage';
 export { ShowcasePage } from './ShowcasePage';
