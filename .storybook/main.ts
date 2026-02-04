@@ -14,6 +14,7 @@ const config: StorybookConfig = {
       ...config.resolve.alias,
       '@': resolve(__dirname, '../src'),
     };
+    config.plugins = config.plugins?.filter((p) => p && !('name' in p && p.name === 'vite:dts'));
     return config;
   },
 };
